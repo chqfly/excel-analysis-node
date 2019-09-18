@@ -12,6 +12,8 @@ export default class Solution extends Controller {
         this.ctx.status = 200;
         this.ctx.body = {
           data: JSON.parse(data),
+          errcode: 0,
+          errmsg: 'success',
         };
         reslove();
       });
@@ -27,6 +29,8 @@ export default class Solution extends Controller {
         this.ctx.status = 200;
         this.ctx.body = {
           data: true,
+          errcode: 0,
+          errmsg: 'success',
         };
         reslove();
       });
