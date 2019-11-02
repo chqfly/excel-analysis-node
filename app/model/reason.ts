@@ -5,16 +5,16 @@ export default (app: Application) => {
   const Schema = mongoose.Schema;
   const ObjectId = Schema.Types.ObjectId;
 
-  const PhenomenonSchema = new Schema({
+  const ReasonSchema = new Schema({
     name: {
       type: String,
       required: true,
     },
-    reasons: [{
+    solutions: [{
       type: ObjectId,
-      ref: 'Reason',
+      ref: 'Solution',
     }],
   });
 
-  return mongoose.model('Phenomenon', PhenomenonSchema);
+  return mongoose.model('Reason', ReasonSchema);
 };
