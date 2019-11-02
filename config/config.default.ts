@@ -19,6 +19,19 @@ export default (appInfo: EggAppInfo) => {
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS',
   };
 
+  config.mongoose = {
+    url: 'mongodb://49.235.163.233:27017/quickSearch',
+    options: {
+      user: 'caihongquan',
+      pass: 'caihongquan.1',
+      reconnectTries: Number.MAX_VALUE,
+      reconnectInterval: 500,
+      poolSize: 10,
+      bufferMaxEntries: 0,
+      useUnifiedTopology: true,
+    },
+  };
+
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
