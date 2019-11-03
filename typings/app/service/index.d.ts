@@ -3,9 +3,13 @@
 
 import 'egg';
 import ExportPhenomenon from '../../../app/service/Phenomenon';
+import ExportReason from '../../../app/service/Reason';
+import ExportSolution from '../../../app/service/Solution';
 
 declare module 'egg' {
   interface IService {
     phenomenon: ExportPhenomenon;
+    reason: ExportReason;
+    solution: ExportSolution;
   }
 }
