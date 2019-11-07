@@ -7,7 +7,7 @@ class BaseContoller extends Controller {
   public success(data: any) {
     this.ctx.body = {
       data,
-      code: 0,
+      errcode: 0,
       message: '成功',
     };
   }

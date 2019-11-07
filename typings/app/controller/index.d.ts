@@ -2,6 +2,7 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
+import ExportFault from '../../../app/controller/Fault';
 import ExportPhenomenon from '../../../app/controller/Phenomenon';
 import ExportReason from '../../../app/controller/Reason';
 import ExportSolution from '../../../app/controller/Solution';
@@ -9,6 +10,7 @@ import ExportHome from '../../../app/controller/home';
 
 declare module 'egg' {
   interface IController {
+    fault: ExportFault;
     phenomenon: ExportPhenomenon;
     reason: ExportReason;
     solution: ExportSolution;
