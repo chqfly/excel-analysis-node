@@ -16,6 +16,12 @@ class FaultContoller extends BaseController {
     this.success(res);
   }
 
+  public async show() {
+    const { id } = this.ctx.params;
+    const res = await this.faultService.model.findById(id);
+    this.success(res);
+  }
+
   public async create() {
     const body = this.ctx.request.body;
     const rules = {
