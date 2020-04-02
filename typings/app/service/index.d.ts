@@ -2,10 +2,16 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
-import ExportTest from '../../../app/service/Test';
+import ExportFault from '../../../app/service/Fault';
+import ExportPhenomenon from '../../../app/service/Phenomenon';
+import ExportReason from '../../../app/service/Reason';
+import ExportSolution from '../../../app/service/Solution';
 
 declare module 'egg' {
   interface IService {
-    test: ExportTest;
+    fault: ExportFault;
+    phenomenon: ExportPhenomenon;
+    reason: ExportReason;
+    solution: ExportSolution;
   }
 }
